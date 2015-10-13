@@ -64,7 +64,7 @@ $ sudo make
 
 ### 3. Installing the VSE module
 ```sh
-$ sudo rmmod mlxn_en
+$ sudo rmmod mlx4_en
 
 $ sudo insmod driver/net/ethernet/mellanox/mlx4/mlx4_en.ko
 
@@ -72,4 +72,17 @@ $ sudo insmod driver/net/ethernet/mellanox/mlx4/vse.ko
 
 ```
 
-- Node: 
+- Node: For Using RPS function, you run below script.
+```sh
+$ sudo vse/set_rps.sh <interface(e.g eth1)>
+```
+
+### 4. Set flow entries from CLI
+After installing the VSE module, you can set flow entries from CLI.
+```sh
+$ sudo mknod /dev/vse_dev c 60 0
+
+$ gcc vse_set_entry.c
+
+$ ./a.out --vni 10 --irq 3
+```
