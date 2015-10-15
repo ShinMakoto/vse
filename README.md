@@ -39,6 +39,8 @@ https://github.com/sdnnit/mlxn-en-vse
 Then, you download the code of VSE into mlxn-en/mellanox/mlx4/
 
 ```sh
+$ cd mlx-en-vse/mellanox/mlx4
+
 $ git clone https://github.com/sdnnit/vse mlxn-en-vse/mellanox/mlx4/
 
 ```
@@ -46,6 +48,8 @@ $ git clone https://github.com/sdnnit/vse mlxn-en-vse/mellanox/mlx4/
 To build the module, you can simply run the script.
 
 ```sh
+$ cd ../../
+
 $ sudo ./setup.sh
 
 $ sudo ./install.sh
